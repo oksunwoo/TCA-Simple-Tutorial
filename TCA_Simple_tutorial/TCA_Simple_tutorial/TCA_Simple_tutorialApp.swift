@@ -11,7 +11,7 @@ import SwiftUI
 struct TCA_Simple_tutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CounterView()
         }
     }
 }
