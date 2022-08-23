@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TCA_Simple_tutorialApp: App {
+    let counterStore = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())
+    
     var body: some Scene {
         WindowGroup {
-            CounterView()
+            CounterView(store: counterStore)
         }
     }
 }
